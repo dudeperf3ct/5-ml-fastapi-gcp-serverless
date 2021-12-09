@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 curl -X 'POST' \
-  'https://wine-ratings.azurewebsites.net/predict' \
+  'https://wine-ratings-b4yojuwgbq-uc.a.run.app/predict' \
   -H 'accept: application/json' \
   -H 'Content-Type: application/json' \
   -d '{

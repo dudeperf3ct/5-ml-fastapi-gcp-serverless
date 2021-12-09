@@ -1,8 +1,8 @@
-### Deploy ML model to Azure using FastAPI
+### Deploy ML model to GCP using FastAPI
 
-Azure app: https://wine-ratings.azurewebsites.net/
+GCP app: https://wine-ratings-b4yojuwgbq-uc.a.run.app/
 
-In this exercise, we will build a fastapi ML application and deploy it with continuous delivery on Azure using Azure App Services and Azure DevOps Pipelines.
+In this exercise, we will build a fastapi ML application and deploy it with continuous delivery on GCP using Cloud Run and Cloud Build..
 
 ### ML
 
@@ -17,10 +17,16 @@ docker build -t wine .
 docker run --rm -it -v $(pwd):/app -p 8000:8000 wine
 ```
 
-### Azure
+### GCP
 
-To deploy the fastapi application on Azure following steps were taken.
+To deploy the fastapi application on GCP following steps were taken.
 
-1. Add Azure Pipelines from Github Marketplace while creating the github repo.
-2. Create a Azure DevOps account and create a build pipeline for this repo. Check if the build was successful.
-3. Create a Azure account and from `Container registries` -> `Repositories`, using the proper docker image created from previous step and tag, click `Deploy to web app` option.
+1. While creating repo, add Google Cloud Build from Marketplace.
+
+2. Create google cloud account.
+
+3. Create a service in `Cloud Run` adding this repo as `Continous Deploy from source repository`
+
+   > Add 8000 under Containers in section Container, Variables & Secrets, Connections, Security
+
+4. App will deployed, to monitor keep checking logs.
