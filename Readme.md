@@ -25,7 +25,7 @@ To deploy the fastapi application on GCP following steps were taken.
 
 2. Create google cloud account.
 
-3. Create a service in `Cloud Run` adding this repo as `Continous Deploy from source repository`
+3. Create a service in `Cloud Run` adding this repo as `Continuous Deploy from source repository`
 
    > Add 8000 under Containers in section Container, Variables & Secrets, Connections, Security
 
